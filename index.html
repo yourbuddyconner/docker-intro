@@ -35,27 +35,28 @@
 		<div class="reveal">
 
 		<div class="slides">
-	
+
 <section>
 	<h1>Intro to Docker</h1>
 	<div>
-		<img src="docker-img/docker.png" style="width: 432px; height: 376px; max-height: none; max-width: none;"/>
+		<img src="docker-img/docker-footer.png" style=""/>
 		<br/>
+		<h2>Docker.io</h2>
 	</div>
 	<div>
 		The contents of the the slides have been stol..., umm, <br/>
 		<i>liberally borrowed</i> from <a href="http://www.slideshare.net/dotCloud">Docker Slideshare</a> materials.<br/>
-		Thanks to everyone at Docker, Inc!
+		Then they were borrowed from <a href="https://github.com/pointful/docker-intro" target="_blank">John Lewis's</a> github repository and updated by <a href="http://connerswann.me" target="_blank">ME</a>!
 	</div>
 </section>
 		
 <section>
 	<h2>Since it started in March 2013...</h2>
 	<ul>
-		<li class="fragment" data-fragment-index="0">&gt;200,000 pulls</li>
-		<li class="fragment" data-fragment-index="2">&gt;7,500 github stars</li>
-		<li class="fragment" data-fragment-index="3">&gt;200 significant contributors</li>
-		<li class="fragment" data-fragment-index="4">&gt;200 projects built on top of docker</li>
+		<li class="fragment" data-fragment-index="0">&gt;500,000 pulls</li>
+		<li class="fragment" data-fragment-index="2">&gt;25,000 github stars</li>
+		<li class="fragment" data-fragment-index="3">&gt;1,000 unique contributors</li>
+		<li class="fragment" data-fragment-index="4">&gt;hundreds of projects built on top of docker</li>
 		<ul>
 			<li class="fragment" data-fragment-index="4">UIs, mini-PaaS, Remote Desktop...</li>
 		</ul>
@@ -135,7 +136,7 @@
 	</div>
 	<div style="text-align: center; font-size: 24px; line-height: 1.1em; ">
 		<i><font color="#073763">* Where "anywhere" means an x86 server running a modern Linux kernel<br/>
-			(3.2+ generally or 2.6.32+ for RHEL 6.5+,&nbsp;Fedora, &amp; related)</font></i>
+			(3.2+ generally or 2.6.32+ for RHEL 6.5+,&nbsp;Fedora, &amp; related)</font> OR, more recently, a <a href="http://blog.docker.com/2015/08/tp-docker-engine-windows-server-2016/">Windows Host</a>!</i>
 	</div>
 </section>
 
@@ -187,12 +188,12 @@
 				<li>Own process space</li>
 				<li>Own network interface</li>
 				<li>Can run stuff as root</li>
-				<li>Can have its own /sbin/init (different from host)</li>
+				<li>Can have its own /sbin/init <br>(different from host, i.e. CentOS on Ubuntu Host)</li>
 				<li>&lt;&lt;machine container&gt;&gt;</li>
 			</ul>
 			<li class="fragment" data-fragment-index="3">Low level: chroot on steroids</li>
 			<ul style="font-size: 24px;" class="fragment" data-fragment-index="3">
-				<li>Can also <i>not </i>have its own /sbin/init</li>
+				<li>Can also <i>not </i>have its own /sbin/init <br> (i.e. Ubuntu on Ubuntu host)</li>
 				<li>Container = isolated processes</li>
 				<li>Share kernel with host</li>
 				<liNo device emulation</li>
@@ -234,6 +235,10 @@
 	<h1>Demo Time</h1>
 </section>
 
+<section>
+	<h3>Easy Building</h3>
+	<video src="docker-img/docker-build.ogv" height="85%" width="85%" autoplay loop></video>
+</section>
 <section>
 	<h2>Ecosystem Support</h2>
 	<font style="font-size: 28px; line-height: 1.1em; ">
@@ -279,30 +284,21 @@
 </section>
 
 <section>
-	<h2>Docker Futures</h2>
+	<h2>Docker Project Status</h2>
 	<ul style="font-size: 34px; line-height: 1.1em; text-align: left; width:95%;">
-		<img style="float:right;" src="docker-img/docker-futures.png"/>
-		<li>Docker 0.7 (current release)</li>
+		<img style="float:right;" src="docker-img/docker-toolbox.jpg"/>
+		<li>Docker 1.8 (current release)</li>
 		<ul>
-			<li>Fedora compatibility</li>
-			<li>Reduce kernel dependencies</li>
-			<li>Device mapper</li>
-			<li>Container linking</li>
+			<li>Docker Content Trust</li>
+			<li>Docker Toolbox</li>
+			<li>Revamped Docker.io</li>
 		</ul>
-		<li>Docker 0.8 (Dec)</li>
-		<ul>
-			<li>Shrink &nbsp;and stabilize Core</li>
-			<li>Provide stable, pluggable API</li>
-			<li>RHEL compatibility</li>
-			<li>Nested containers</li>
-			<li>Beam: Introspection API based on Redis</li>
-			<li>Expand snapshot management features for data volumes</li>
-			<li>Will consider this “production ready”</li>
-		</ul>
-		<li>Docker 0.9 (Jan)</li>
-		<li>Docker 1.0 (Feb)</li>
-		<ul>
-			<li>Will offer support for this product</li>
+		<li>Companion Projects</li>
+		<ul>	
+			<li><a href="http://docs.docker.com/compose/">Docker-Compose</a> <br> Lightweight YAML-Based multi-container environment build scripts</a></li>
+			<li><a href="http://docs.docker.com/machine/">Docker Machine</a> <br> Automatically spin up new docker hosts</li>
+			<li><a href="http://docs.docker.com/swarm/">Docker Swarm</a> <br> Out of the box docker clusters</li>
+			<li><a href="https://kitematic.com/">Kitematic</a> <br> Docker GUI, no command prompt required</li>
 		</ul>
 	</ul>
 </section>
